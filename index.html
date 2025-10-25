@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="login">
+    <div class="container">
+      <div class="form__group">
+        <h1 class="title">Users App</h1>
+        <form class="form" data-form>
+          <div class="control__field">
+            <label for="nameId" class="form__label">Name:</label>
+            <input type="text" class="form__control" id="nameId" name="userName" required placeholder="Enter name..."
+              minlength="2" maxlength="23">
+          </div>
+          <div class="control__field">
+            <label for="cityId" class="form__label">City:</label>
+            <input type="text" class="form__control" id="cityId" name="userCity" required placeholder="Enter сity..."
+              minlength="2">
+          </div>
+          <div class="control__field">
+            <label for="emailId" class="form__label">Email:</label>
+            <input type="email" class="form__control" id="emailId" name="userEmail" required
+              placeholder="Enter email...">
+          </div>
+          <div class="control__field">
+            <label for="imageId" class="form__label">Image:</label>
+            <select class="form__control form__control-images" id="imageId" name="userImage" required>
+              <option value="">Select a picture...</option>
+              <hr>
+              <option value="https://www.nexplorer.ru/load/Image/1113/koshki_4.jpg">Cat
+                1</option>
+              <option value="https://www.ptichka.ru/data/cache/2019jul/17/30/97110_50709.jpg">Cat 2</option>
+              <option
+                value="https://krots.top/uploads/posts/2022-03/1646879019_6-krot-info-p-smeshnaya-mokraya-sobaka-smeshnie-foto-8.jpg">
+                Dog 1</option>
+              <option
+                value="https://www.thesprucepets.com/thmb/hxWjs7evF2hP1Fb1c1HAvRi_Rw0=/2765x0/filters:no_upscale():strip_icc()/chinese-dog-breeds-4797219-hero-2a1e9c5ed2c54d00aef75b05c5db399c.jpg">
+                Dog 2</option>
+              <option value="https://zoographia.ru/upload/iblock/f5e/h6up57sp4z07z1nsdx8cq5e5514m4bwv.jpg">Enot 1
+              </option>
+              <option
+                value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-qq8KaUGtnIGJ7MY1CEsWl7PjWsJ3UTeN_A&s">
+                Enot 2</option>
+              <option value="https://i.pinimg.com/236x/35/82/50/358250be0158c6c303f4ef6d522204b9.jpg">Panda 1</option>
+              <option
+                value="https://i0.wp.com/revistaamazonia.com.br/wp-content/uploads/2025/04/Coala-dorme-22-horas-por-dia-e-as-outras-passa-comendo.webp?fit=768%2C512&ssl=1">
+                Coala 1</option>
+            </select>
+          </div>
+          <button class="btn__form" type="submit">Create user</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="container">
+        <div class="modal__content">
+          <button class="close__modal-btn"><img src="/images/close__modal-img.svg" alt=""
+              class="close__modal-img"></button>
+          <p class="title__modal">Новый пользователь успешно создан!🤗</p>
+          <p class="text__modal">Вы успешно создали нового пользователя, проверьте он появился на странице</p>
+          <button class="btn__close-modal">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal__deleted">
+    <div class="modal__deleted-content">
+      <h2 class="title__modal__deleted">Пользователь успешно удален!</h2>
+      <p class="text__modal__deleted">К сожалению его нельзя уже вернуть(</p>
+    </div>
+  </div>
+
+  <div class="border"></div>
+
+  <div class="users__wrapper" data-users-wrapper></div>
+
+  <dialog class="edit__form-dialog" data-edit-user-form-dialog></dialog>
+
+  <script src="/main.js"></script>
+</body>
